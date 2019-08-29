@@ -1,0 +1,297 @@
+#search-component {
+    top: 0;
+    position: absolute;
+    z-index: 4;
+    margin:10px;
+}
+
+.vasquette-margin-enabled#omnibox {
+    margin: 8px 0 8px 8px;
+}
+
+#omnibox {
+    position: absolute;
+    left: 0px;
+    margin: 16px;
+    top: 0px;
+    z-index: 15;
+    transition: left 0.5s;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    transition-property: -webkit-transform,transform,visibility,opacity;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.0,0.0,0.2,1);
+}
+
+#omnibox-singlebox{
+	text-align: left;
+}
+
+.omnibox-singlebox-root.omnibox-active {
+    display: block;
+}
+
+.searchbox-hamburger-container {
+    position: absolute;
+    z-index: 1003;
+    left: 0;
+    top: 0;
+}
+
+.searchbox-hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 12px 16px;
+}
+
+.searchbox-hamburger::before {
+    background-image: url(//maps.gstatic.com/tactile/omnibox/quantum_menu-v2-2x.png);
+}
+
+.searchbox-hamburger::before {
+    content: '';
+    display: block;
+    background-image: url(//maps.gstatic.com/tactile/omnibox/quantum_menu-v2-1x.png);
+    background-size: 48px 24px;
+    background-position: 0 0;
+    height: 24px;
+    width: 24px;
+    opacity: .62;
+}
+
+.omnibox-tooltip {
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1003;
+    white-space: nowrap;
+}
+
+.tooltip-dark {
+    display: block;
+    z-index: 100;
+    padding: 2px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    background-color: #202124;
+    color: #dadce0;
+    letter-spacing: 0.01428571em;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    box-shadow: 0 4px 10px rgba(60,64,67,.28);
+}
+
+.searchbox.suggestions-shown {
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #DADCE0;
+}
+
+.searchbox-shadow {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
+}
+
+.searchbox {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 392px;
+    height: 48px;
+    border-bottom: 1px solid transparent;
+    padding: 12px 104px 11px 64px;
+    transition-property: background,box-shadow;
+    transition-duration: 0.3s;
+}
+
+#searchbox_form{
+	display: block;
+    margin-top: 0em;
+    position: relative;
+}
+
+.searchbox .searchboxinput, #omnibox .tactile-searchbox-input {
+    color: inherit;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    vertical-align: top;
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+
+.searchbox-searchbutton-container {
+    position: absolute;
+    right: 54px;
+    top: 0;
+}
+
+.searchbox-searchbutton {
+    display: block;
+    padding: 12px 15px;
+}
+
+a, button, h1, h2, h3, h4, h5, h6, input, ol, p, textarea, th, ul {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    font: inherit;
+    list-style: none;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.searchbox-searchbutton::before {
+    background-image: url(//maps.gstatic.com/tactile/omnibox/quantum_search_button-20150825-2x.png);
+}
+
+.searchbox-searchbutton::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(//maps.gstatic.com/tactile/omnibox/quantum_search_button-20150825-1x.png);
+    background-size: 72px 24px;
+}
+
+.omnibox-tooltip {
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1003;
+    white-space: nowrap;
+}
+
+.tooltip-dark {
+    display: block;
+    z-index: 100;
+    padding: 2px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    background-color: #202124;
+    color: #dadce0;
+    letter-spacing: 0.01428571em;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    box-shadow: 0 4px 10px rgba(60,64,67,.28);
+}
+
+.searchbox-searchbutton-container::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10px;
+    border-left: 1px solid #ddd;
+    height: 28px;
+}
+
+.directions-button-shown .searchbox-directions-container {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.searchbox-directions {
+    color: #4285F4;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    height: 48px;
+    opacity: .8;
+    text-align: center;
+    text-transform: uppercase;
+    width: 54px;
+}
+
+.searchbox-directions::before {
+    background-image: url(//maps.gstatic.com/tactile/omnibox/directions-2x-20150909.png);
+}
+
+.searchbox-directions::before {
+    background: url(//maps.gstatic.com/tactile/omnibox/directions-1x-20150909.png) no-repeat 1px 1px/20px;
+    content: '';
+    display: block;
+    height: 22px;
+    margin: 0 auto;
+    width: 22px;
+}
+
+.omnibox-tooltip {
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1003;
+    white-space: nowrap;
+}
+
+.tooltip-dark {
+    display: block;
+    z-index: 100;
+    padding: 2px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    background-color: #202124;
+    color: #dadce0;
+    letter-spacing: 0.01428571em;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    box-shadow: 0 4px 10px rgba(60,64,67,.28);
+}
+
+#searchboxinput{
+	border: none!important; 
+	padding: 0px!important; 
+	margin: 0px!important; 
+	height: auto!important; 
+	width: 100%!important; 
+	background: url("data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw%3D%3D") transparent!important; 
+	position: absolute!important; 
+	z-index: 6!important; 
+	left: 0px!important; 
+	outline: none!important;
+}
+
+
+.suggestions{
+	position: relative;
+    text-align: left;
+    min-width: 224px;
+
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size: 15px;
+    overflow: hidden;
+    width: 392px;
+    padding: 8px 0;
+}
+
+.suggestions .list-suggestions{
+	background: transparent;
+    border: 0;
+    border-radius: 0;
+    font: inherit;
+    list-style: none;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.suggestions .item{
+	text-align: left;
+}
